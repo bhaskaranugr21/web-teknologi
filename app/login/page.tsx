@@ -1,4 +1,4 @@
-'use client'; //Penggunaan useActionState harus mencantumkan ini
+'use client'; //pengunaan useactionstate harus mencantumkan ini
 
 import { lusitana } from '@/app/ui/fonts';
 import Image from 'next/image';
@@ -13,12 +13,11 @@ import { useActionState } from 'react';
 import { authenticate } from 'app/lib/actions'; //autentikasi
 
 export default function Page() {
-    const [errorMessage, formAction, isPending] = useActionState(
-        authenticate,
-        undefined,
-    );
-
-    return (
+  const [errorMessage, formAction, isPending]= useActionState(
+      authenticate,
+      undefined,
+  );
+  return (
         <main className="flex min-h-screen flex-col p-6">
             <div className="flex h-20 shrink-0 items-end rounded-lg bg-blue-500 p-4 md:h-52">
                 <Image
